@@ -1,0 +1,60 @@
+# Dependencies
+node_modules/
+package-lock.json
+yarn.lock
+
+# Environment variables
+.env
+.env.local
+.env.production
+
+# Runtime data
+database/downloads/*
+!database/downloads/.gitkeep
+database/cookies.json
+logs/*.log
+!logs/.gitkeep
+
+# Temporary files
+*.tmp
+*.temp
+*.mp4
+*.mkv
+*.avi
+*.mov
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.classpath
+
+# PM2 logs
+pm2-*.log
+.pm2/
+
+# Docker
+docker-compose.override.yml
+
+# Debug logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# Build outputs
+dist/
+build/
