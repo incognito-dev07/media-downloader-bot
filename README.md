@@ -1,8 +1,8 @@
-Video Downloader Bot
+# Video Downloader Bot
 
 Telegram bot for downloading videos from YouTube, TikTok, Instagram, and Facebook using yt-dlp and fallback APIs.
 
-Features
+## Features
 
 · Supports YouTube, TikTok, Instagram, Facebook
 · Automatic format detection and quality selection
@@ -10,13 +10,13 @@ Features
 · Automatic file cleanup
 · Fallback download methods for TikTok
 
-Requirements
+## Requirements
 
 · Node.js 14 or higher
 · Telegram Bot Token (from @BotFather)
 · yt-dlp installed on the server
 
-Installation
+## Installation
 
 1. Clone the repository
 2. Install dependencies
@@ -45,24 +45,28 @@ Download from yt-dlp.github.io
 npm start
 ```
 
-Configuration
+## Configuration
 
 Create a .env file with the following variables:
 
-Variable Description Default
-BOT_TOKEN Telegram bot token Required
-MAX_FILE_SIZE Maximum file size in MB 50
-MAX_REQUESTS_PER_USER Maximum downloads per user 15
-TIME_WINDOW Rate limit window in seconds 3600
-MAX_QUALITY Maximum video quality in pixels 720
-DOWNLOAD_TIMEOUT Download timeout in ms 180000
+### Variable Description Default
+```
+BOT_TOKEN - Telegram bot token Required
+MAX_FILE_SIZE - Maximum file size in MB 50
+MAX_REQUESTS_PER_USER - Maximum downloads per user 15
+TIME_WINDOW - Rate limit window in seconds 3600
+MAX_QUALITY - Maximum video quality in pixels 720
+DOWNLOAD_TIMEOUT - Download timeout in ms 180000
+```
 
-Commands
+### Commands
 
 Command Description
-/start Show welcome message
-/help Show available commands
-/limit Check remaining downloads
+```
+/start - Show welcome message
+/help - Show available commands
+/limit - Check remaining downloads
+```
 
 Bot Commands for @BotFather
 
@@ -74,9 +78,9 @@ help - Show available commands
 limit - Check download limit
 ```
 
-Deployment
+## Deployment
 
-Deploy to Render
+### Deploy to Render
 
 1. Create a new Web Service on Render
 2. Set build command: npm install
@@ -84,7 +88,7 @@ Deploy to Render
 4. Add environment variables
 5. Add a render.yaml or use a Dockerfile
 
-Deploy to Railway
+### Deploy to Railway
 
 1. Create a new project on Railway
 2. Add a Dockerfile:
@@ -99,9 +103,7 @@ COPY . .
 CMD ["npm", "start"]
 ```
 
-1. Add environment variables
-
-Deploy to VPS
+### Deploy to VPS
 
 1. Install Node.js and yt-dlp
 2. Install PM2: npm install -g pm2
@@ -109,7 +111,7 @@ Deploy to VPS
 4. Save PM2 config: pm2 save
 5. Enable startup: pm2 startup
 
-Project Structure
+## Project Structure
 
 ```
 ├── index.js          # Main bot entry point
@@ -126,6 +128,6 @@ Project Structure
 └── logs/             # Bot logs
 ```
 
-License
+### License
 
 MIT
